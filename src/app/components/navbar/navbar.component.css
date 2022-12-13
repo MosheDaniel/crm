@@ -1,0 +1,28 @@
+img{
+height: 50px;
+width: 50px;
+margin: 5px;
+}
+
+.btn {
+    padding: .45rem 1.5rem .35rem;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: linear-gradient(#700da9,#480171) 
+
+
+
+}
+
+p{
+    color: white;
+    font-weight: bold;
+}
+
+#btn-size{
+  margin-right: 115px;
+  margin-left: 20px;
+ 
+}

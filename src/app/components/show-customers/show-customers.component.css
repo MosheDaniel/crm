@@ -1,0 +1,19 @@
+table{
+    margin-left: 30px;
+}
+
+.tr-bgc{
+    background-color: #152733;
+}
+
+th{
+    color: white
+}
+
+.navbar{
+    z-index: 10;
+}
+
+#tdBold{
+    font-weight: bold;
+}

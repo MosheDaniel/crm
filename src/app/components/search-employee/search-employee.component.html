@@ -1,0 +1,35 @@
+<ng-container *ngIf="employee.length; else noEmployees">
+  <input type="text" placeholder="First Name" [(ngModel)]="firstName" />
+  <input type="text" placeholder="Last Name" [(ngModel)]="lastName" />
+  <input type="text" placeholder="Email" [(ngModel)]="email" />
+
+  <ng-container
+    *ngIf="
+      employee
+        | filter : 'firstName' : firstName
+        | filter : 'lastName' : lastName
+        | filter : 'email' : email as employees
+    "
+  >
+    <table class="table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</ng-container>
+
+<ng-template #noEmployees>
+  <p>Theres no employees</p>
+</ng-template>

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr class="tr-bgc">
+      <th scope="col">No.</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees; index as i">
+      <td id="tdBold">{{ i + 1 }}</td>
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.email }}</td>
+    </tr>
+  </tbody>
+</table>

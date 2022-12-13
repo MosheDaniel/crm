@@ -1,0 +1,40 @@
+<body>
+  <div id="wrapper" class="toggled">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" class="col-3">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a routerLink="#"><i class="fa-solid fa-users"></i> Customers</a>
+        </li>
+        <li class="sidebar-brand">
+          <a routerLink="/searchCustomer"
+            ><i class="fa-regular fa-address-book"></i> Search</a
+          >
+        </li>
+        <li class="sidebar-brand">
+          <a href="#"><i class="fa-regular fa-hand-point-up"> </i> Leads</a>
+        </li>
+        <li class="sidebar-brand">
+          <a href="#"><i class="fa-regular fa-flag"></i> Reports</a>
+        </li>
+        <li class="sidebar-brand">
+          <a href="#"
+            ><i class="fa-regular fa-rectangle-list"></i> Integrations</a
+          >
+        </li>
+        <li class="sidebar-brand">
+          <a href="#"
+            ><i class="fa-solid fa-champagne-glasses"></i> Year-end Sale</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+</body>

@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "w0311-moshe": {
+      "hosting": {
+        "crm": [
+          "crm-e1987"
+        ]
+      }
+    },
+    "crm-m1987": {
+      "hosting": {
+        "crm": [
+          "crm-m1987"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "crm-m1987"
+  }
+}

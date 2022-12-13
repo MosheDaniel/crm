@@ -1,0 +1,63 @@
+<div class="container m-3 pr-3">
+  <form #updateCustomer="ngForm" (ngSubmit)="updateTheCustomer()">
+    <h4>Update customer record</h4>
+    <div class="mb-3">
+      <label class="form-label">First Name</label>
+      <div class="col-11">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First Name"
+          name="firstName"
+          [(ngModel)]="customer.firstName"
+          #name="ngModel"
+          required
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Last Name</label>
+      <div class="col-11">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last Name"
+          name="lastName"
+          [(ngModel)]="customer.lastName"
+          #author="ngModel"
+          required
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <div class="col-11">
+        <input
+          type="text"
+          class="form-control"
+          name="email"
+          [(ngModel)]="customer.email"
+          #genre="ngModel"
+          required
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <div class="col-11">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Phone"
+          name="phone"
+          [(ngModel)]="customer.phone"
+          #price="ngModel"
+          required
+        />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-warning border-dark">
+      <i class="fa-solid fa-plus"></i> Update Customer
+    </button>
+  </form>
+</div>

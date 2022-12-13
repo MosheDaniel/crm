@@ -1,0 +1,58 @@
+<div class="bg">
+  <form #addCustomer="ngForm" (ngSubmit)="addNewCustomer()">
+    <h4>Add new customer</h4>
+
+    <div class="row mb-3">
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First Name"
+          name="firstName"
+          [(ngModel)]="customer.firstName"
+          #firstName="ngModel"
+          required
+        />
+      </div>
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last Name"
+          name="lastName"
+          [(ngModel)]="customer.lastName"
+          #lastName="ngModel"
+          required
+        />
+      </div>
+      <div class="col-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Email"
+          name="email"
+          [(ngModel)]="customer.email"
+          #email="ngModel"
+          required
+        />
+      </div>
+      <div class="col-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Phone"
+          name="phone"
+          [(ngModel)]="customer.phone"
+          #phone="ngModel"
+          required
+        />
+      </div>
+
+      <div class="col-3">
+        <button type="submit" class="btn btn-warning">
+          <i class="fa-solid fa-plus"></i> Add Customer
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

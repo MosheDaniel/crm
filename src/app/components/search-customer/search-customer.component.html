@@ -1,0 +1,39 @@
+<ng-container *ngIf="customer.length; else noCustomers">
+  <input type="text" placeholder="First Name" [(ngModel)]="firstName" />
+  <input type="text" placeholder="Last Name" [(ngModel)]="lastName" />
+  <input type="text" placeholder="Email" [(ngModel)]="email" />
+  <input type="text" placeholder="Phone" [(ngModel)]="phone" />
+
+  <ng-container
+    *ngIf="
+      customer
+        | filter : 'firstName' : firstName
+        | filter : 'lastName' : lastName
+        | filter : 'email' : email
+        | filter : 'phone' : phone as customers
+    "
+  >
+    <table class="table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.firstName }}</td>
+          <td>{{ customer.lastName }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.phone }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</ng-container>
+
+<ng-template #noCustomers>
+  <p>Theres no customers</p>
+</ng-template>
