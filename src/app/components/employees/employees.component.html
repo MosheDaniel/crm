@@ -3,92 +3,8 @@
   <app-side-bar></app-side-bar>
   <div class="bg">
     <h3 id="teamHead"><strong>Our Team</strong></h3>
+    <div class="p-1 bg-warning"></div>
   </div>
-  <!-- <div id="bg" class="row">
-  <div class="col-3"></div>
-  <div class="col-8">
-    <h4>Search customer</h4>
-    <ng-container *ngIf="employees.length; else noEmployees">
-      <div class="row mb-4">
-        <div class="col-3">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="First Name"
-            [(ngModel)]="firstName"
-          />
-        </div>
- </div>
-    </ng-container>
-  </div>
-</div>
-
-<ng-container
-  *ngIf="
-    employees
-      | employee : 'firstName' : firstName
-      | employee : 'lastName' : lastName
-      | employee : 'email' : email as employees
-
-  "
->
-  <div class="row">
-    <div class="col-3"></div>
-    <div class="col-8">
-      <table class="table table-striped mt-5">
-        <thead>
-          <tr class="tr-bgc">
-            <th scope="col">No.</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let employee of employees; index as i">
-            <td id="tdBold">{{ i + 1 }}</td>
-            <td>{{ employee.firstName }}</td>
-            <td>{{ employee.lastName }}</td>
-            <td>{{ employee.email }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</ng-container>
-
-
-
-
-
-
-
-<ng-template #noEmployees>
-  <p>Theres no customers</p>
-</ng-template>  -->
-
-  <!-- <div class="col mb-3">
-      <div class="col-2"></div>
-    </div>
-  </div>
-  <table class="table table-striped">
-    <thead>
-      <tr class="tr-bgc">
-        <th scope="col">No.</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let employee of employees; index as i">
-        <td id="tdBold">{{ i + 1 }}</td>
-        <td>{{ employee.firstName }}</td>
-        <td>{{ employee.lastName }}</td>
-        <td>{{ employee.email }}</td>
-      </tr>
-    </tbody>
-  </table>  -->
 
   <section>
     <div class="container">
@@ -272,4 +188,5 @@
     </div>
   </section>
 </body>
+
 <app-footer></app-footer>

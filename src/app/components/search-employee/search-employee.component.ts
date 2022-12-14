@@ -12,6 +12,7 @@ employee: Employee[]=[]
 firstName: string=""
 lastName: string=""
 email: string=""
+phone: string=""
 
   constructor(private employeesService: EmployeesService) { }
 
