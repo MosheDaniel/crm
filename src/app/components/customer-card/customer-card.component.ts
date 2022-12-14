@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Customer } from 'src/app/interfaces/Customers';
 import { CustomersService } from 'src/app/services/customers.service';
@@ -9,6 +10,7 @@ import { CustomersService } from 'src/app/services/customers.service';
   styleUrls: ['./customer-card.component.css']
 })
 export class CustomerCardComponent implements OnInit{
+  customers: Customer[]=[];
   @Input() id!: string
   customer: Customer= {firstName: "", lastName: "", email: "", phone: ""}
 
@@ -20,11 +22,12 @@ this.cs.getCustomerById(this.id).subscribe({
     });
   }
 
-  // updateCustomer() {
-  //   this.cs
-  //     .cardCustomer(this.customer)
-  //     .then(() => this.activeModal.close())
-  //     .catch((err) => console.log(err));
-  // }
+showCardCustomer() {
+    this.cs
+      .updateCustomer(this.customer)
+      .then(() => this.activeModal.close())
+      .catch((err) => console.log(err));
+  }
 
+  
 }

@@ -1,37 +1,22 @@
-<!-- <div class="container m-3 my-7 pr-3">
-  <form #cardCustomer="ngForm" (ngSubmit)="getCustomerById()">
-    <h4>Customer card</h4>
-
-    <div class="mb-3">
-      <div class="col-11">
-        <h3
-          name="firstName"
-          [(ngModel)]="customer.firstName"
-          #name="ngModel"
-        ></h3>
+<div class="card" style="max-width: 540px" (ngSubmit)="showCardCustomer()">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="../../../assets/profileImg.jpg"
+        class="img-fluid rounded-start"
+        alt="profile"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4 class="card-title">
+          <ins> {{ customer.firstName }} {{ customer.lastName }} </ins>
+        </h4>
+        <h6 class="card-text">
+          <strong>Email: </strong> {{ customer.email }} <br /><br />
+          <strong>Phone: </strong> {{ customer.phone }}
+        </h6>
       </div>
     </div>
-
-    <div class="mb-3">
-      <div class="col-11">
-        <h3
-          name="lastName"
-          [(ngModel)]="customer.lastName"
-          #name="ngModel"
-        ></h3>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <div class="col-11">
-        <h3 name="email" [(ngModel)]="customer.email" #name="ngModel"></h3>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <div class="col-11">
-        <h3 name="phone" [(ngModel)]="customer.phone" #name="ngModel"></h3>
-      </div>
-    </div>
-  </form>
-</div> -->
+  </div>
+</div>

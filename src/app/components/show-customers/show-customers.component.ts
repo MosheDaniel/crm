@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Customer } from 'src/app/interfaces/Customers';
 import { CustomersService } from 'src/app/services/customers.service';
+import { CustomerCardComponent } from '../customer-card/customer-card.component';
 import { EditCustomerComponent } from '../edit-customer/edit-customer.component';
 
 @Component({
@@ -12,7 +14,7 @@ import { EditCustomerComponent } from '../edit-customer/edit-customer.component'
 export class ShowCustomersComponent implements OnInit{
   customers: Customer[]=[];
 
-  constructor(private cs: CustomersService, private modal: NgbModal) {}
+  constructor(private cs: CustomersService, private modal: NgbModal, private firestore: Firestore) {}
 
   ngOnInit(): void {
     this.cs.getCustomers().subscribe({
@@ -37,4 +39,15 @@ let modalRef = this.modal.open(EditCustomerComponent, {
 })
 modalRef.componentInstance.id  = customer.id
 }
+
+cardCustomer(customer: Customer){
+let modalRef = this.modal.open(CustomerCardComponent, {
+  size: "md",
+  centered: true,
+  windowClass: "dark-modal"
+})
+modalRef.componentInstance.id  = customer.id
+}
+
+
 }
