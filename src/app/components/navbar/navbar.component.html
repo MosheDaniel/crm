@@ -1,14 +1,15 @@
 <!-- Navbar -->
 <nav
   class="navbar navbar-expand-lg navbar-dark gradient-custom container-fluid"
-  style="position: fixed"
+  style="position: fixed; z-index: 10000"
 >
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Navbar brand -->
-    <img
-      src="../../../assets/crm-low-resolution-logo-color-on-transparent-background.png"
-    />
+    <a routerLink="/home">
+      <img
+        src="../../../assets/crm-low-resolution-logo-color-on-transparent-background.png"
+    /></a>
 
     <!-- Toggle button -->
     <button
@@ -28,7 +29,7 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link active" aria-current="page" routerLink="home">
+          <a class="nav-link active" aria-current="page" routerLink="/home">
             <div>
               <i class="fas fa-home fa-lg mb-1"></i>
             </div>
@@ -36,7 +37,7 @@
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link" routerLink="#!">
+          <a class="nav-link" href="mailto:moo15daa@gmail.com">
             <div>
               <i class="far fa-envelope fa-lg mb-1"></i>
               <span class="badge rounded-pill badge-notification bg-dark"
@@ -48,7 +49,7 @@
         </li>
 
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link" href="#!">
+          <a class="nav-link" href="https://www.cnbc.com/quotes/CRM">
             <div>
               <i class="fas fa-globe-americas fa-lg mb-1"></i>
             </div>
@@ -57,7 +58,10 @@
         </li>
 
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link" href="#!">
+          <a
+            class="nav-link"
+            href="https://www.inogic.com/blog/2021/03/create-alerts-notifications-in-dynamics-365-crm-for-task-event-or-occasion-of-your-choice-and-effectively-manage-it-too/"
+          >
             <div>
               <i class="fas fa-bell fa-lg mb-1"></i>
               <span class="badge rounded-pill badge-notification bg-dark"
@@ -69,7 +73,10 @@
         </li>
 
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link" href="#!">
+          <a
+            class="nav-link"
+            href="https://www.amazingsupport.co.uk/business-applications/crm-support-solutions/"
+          >
             <div>
               <i class="fas fa-headset fa-lg mb-1"></i>
             </div>
@@ -101,8 +108,5 @@
         </button>
       </form>
     </div>
-    <!-- Collapsible wrapper -->
   </div>
-  <!-- Container wrapper -->
 </nav>
-<!-- Navbar -->

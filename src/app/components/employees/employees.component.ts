@@ -9,14 +9,14 @@ import { EmployeesService } from 'src/app/services/employees.service';
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit{
-employee: Employee[]=[]
+employees: Employee[]=[]
 
 
   constructor(private es: EmployeesService, private modal: NgbModal) {}
 
   ngOnInit(): void {
     this.es.getEmployees().subscribe({
-      next: (employeesData: Employee[]) => (this.employee = employeesData),
+      next: (employeesData: Employee[]) => (this.employees = employeesData),
     }); 
   }
 

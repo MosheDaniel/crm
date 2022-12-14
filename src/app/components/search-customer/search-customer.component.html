@@ -1,39 +1,87 @@
-<ng-container *ngIf="customer.length; else noCustomers">
-  <input type="text" placeholder="First Name" [(ngModel)]="firstName" />
-  <input type="text" placeholder="Last Name" [(ngModel)]="lastName" />
-  <input type="text" placeholder="Email" [(ngModel)]="email" />
-  <input type="text" placeholder="Phone" [(ngModel)]="phone" />
-
-  <ng-container
-    *ngIf="
-      customer
-        | filter : 'firstName' : firstName
-        | filter : 'lastName' : lastName
-        | filter : 'email' : email
-        | filter : 'phone' : phone as customers
-    "
-  >
-    <table class="table">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let customer of customers">
-          <td>{{ customer.firstName }}</td>
-          <td>{{ customer.lastName }}</td>
-          <td>{{ customer.email }}</td>
-          <td>{{ customer.phone }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </ng-container>
+<app-navbar></app-navbar>
+<app-side-bar></app-side-bar>
+<div id="bg" class="row">
+  <div class="col-3"></div>
+  <div class="col-8">
+    <h4>Search customer</h4>
+    <ng-container *ngIf="customer.length; else noCustomers">
+      <div class="row mb-4">
+        <div class="col-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="First Name"
+            [(ngModel)]="firstName"
+          />
+        </div>
+        <div class="col-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Last Name"
+            [(ngModel)]="lastName"
+          />
+        </div>
+        <div class="col-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Email"
+            [(ngModel)]="email"
+          />
+        </div>
+        <div class="col-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Phone"
+            [(ngModel)]="phone"
+          />
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<ng-container
+  *ngIf="
+    customer
+      | filter : 'firstName' : firstName
+      | filter : 'lastName' : lastName
+      | filter : 'email' : email
+      | filter : 'phone' : phone as customers
+  "
+>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-8">
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr class="tr-bgc">
+            <th scope="col">No.</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of customers; index as i">
+            <td id="tdBold">{{ i + 1 }}</td>
+            <td>{{ customer.firstName }}</td>
+            <td>{{ customer.lastName }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </ng-container>
 
 <ng-template #noCustomers>
-  <p>Theres no customers</p>
+  <!-- <p>Theres no customers</p> -->
 </ng-template>
+
+<div class="row mt-5">
+  <app-footer></app-footer>
+</div>

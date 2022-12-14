@@ -30,7 +30,6 @@ addCustomer(customer: Customer): Promise <any>{
     return setDoc(customerRef, newCustomer) as Promise<any>;
   }
 
-
   // delete specific customer
 deleteCustomer(customer: Customer): Promise <void>{
   let customerRef  = doc(this.firestore, `customers/${customer.id}`)

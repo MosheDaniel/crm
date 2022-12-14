@@ -17,3 +17,7 @@ th{
 #tdBold{
     font-weight: bold;
 }
+
+a{
+    cursor: pointer;
+}

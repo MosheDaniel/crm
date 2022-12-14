@@ -6,6 +6,7 @@
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
+      <th scope="col">Details</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -19,12 +20,23 @@
       <td>{{ customer.phone }}</td>
       <td>
         <a (click)="updateCustomer(customer)"
-          ><i class="fa-solid fa-pen text-success"></i
+          ><i
+            style="margin-left: 20px"
+            class="fa-solid fa-address-card text-primary"
+          ></i
+        ></a>
+      </td>
+      <td>
+        <a (click)="updateCustomer(customer)"
+          ><i style="margin-left: 10px" class="fa-solid fa-pen text-success"></i
         ></a>
       </td>
       <td>
         <a (click)="deleteCustomer(customer)"
-          ><i class="fa-solid fa-trash text-danger"></i
+          ><i
+            style="margin-left: 20px"
+            class="fa-solid fa-trash text-danger"
+          ></i
         ></a>
       </td>
     </tr>

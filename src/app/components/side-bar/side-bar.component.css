@@ -124,3 +124,7 @@ body {
         margin-right: 0;
     }
 }
+
+#cursor{
+    cursor: not-allowed;
+}

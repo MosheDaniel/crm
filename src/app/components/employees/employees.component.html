@@ -1,18 +1,275 @@
-<table class="table table-striped">
-  <thead>
-    <tr class="tr-bgc">
-      <th scope="col">No.</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let employee of employees; index as i">
-      <td id="tdBold">{{ i + 1 }}</td>
-      <td>{{ employee.firstName }}</td>
-      <td>{{ employee.lastName }}</td>
-      <td>{{ employee.email }}</td>
-    </tr>
-  </tbody>
-</table>
+<body class="bgc">
+  <app-navbar></app-navbar>
+  <app-side-bar></app-side-bar>
+  <div class="bg">
+    <h3 id="teamHead"><strong>Our Team</strong></h3>
+  </div>
+  <!-- <div id="bg" class="row">
+  <div class="col-3"></div>
+  <div class="col-8">
+    <h4>Search customer</h4>
+    <ng-container *ngIf="employees.length; else noEmployees">
+      <div class="row mb-4">
+        <div class="col-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="First Name"
+            [(ngModel)]="firstName"
+          />
+        </div>
+ </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-container
+  *ngIf="
+    employees
+      | employee : 'firstName' : firstName
+      | employee : 'lastName' : lastName
+      | employee : 'email' : email as employees
+
+  "
+>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-8">
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr class="tr-bgc">
+            <th scope="col">No.</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees; index as i">
+            <td id="tdBold">{{ i + 1 }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-container>
+
+
+
+
+
+
+
+<ng-template #noEmployees>
+  <p>Theres no customers</p>
+</ng-template>  -->
+
+  <!-- <div class="col mb-3">
+      <div class="col-2"></div>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr class="tr-bgc">
+        <th scope="col">No.</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; index as i">
+        <td id="tdBold">{{ i + 1 }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.email }}</td>
+      </tr>
+    </tbody>
+  </table>  -->
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-3"></div>
+        <!--Profile Card 1-->
+        <div class="col-md-3">
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+                src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                alt="profile-sample1"
+                class="background"
+              />
+            </div>
+            <div class="profile-thumb-block">
+              <img
+                src="../../../assets/moshe.jpg"
+                alt="profile-image"
+                class="profile"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Refael Daniel<small> Support</small></h3>
+              <div class="icon-block">
+                <a href="#"><i class="fa fa-facebook"></i></a
+                ><a href="#"> <i class="fa fa-twitter"></i></a
+                ><a href="#"> <i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-3 w-100 float-left text-center"></p>
+        </div>
+
+        <!--Profile Card 2-->
+        <div class="col-md-3">
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+                src="../../../assets/landscape1.jpg"
+                alt="profile-sample1"
+                class="background"
+              />
+            </div>
+            <div class="profile-thumb-block">
+              <img
+                src="../../../assets/tamar.jpg"
+                alt="profile-image"
+                class="profile"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Yaara Shapira<small> Engineer</small></h3>
+              <div class="icon-block">
+                <a href="#"><i class="fa fa-facebook"></i></a
+                ><a href="#"> <i class="fa fa-twitter"></i></a
+                ><a href="#"> <i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-3 w-100 float-left text-center"></p>
+        </div>
+
+        <!--Profile Card 3-->
+        <div class="col-md-3">
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+                src="../../../assets/landscape2.jpg"
+                alt="profile-sample1"
+                class="background"
+              />
+            </div>
+            <div class="profile-thumb-block">
+              <img
+                src="../../../assets/adva.jpg"
+                alt="profile-image"
+                class="profile"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Tamar Daniel<small> HR</small></h3>
+              <div class="icon-block">
+                <a href="#"><i class="fa fa-facebook"></i></a
+                ><a href="#"> <i class="fa fa-twitter"></i></a
+                ><a href="#"> <i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 w-100 float-left text-center"></p>
+        </div>
+        <div class="col-3"></div>
+        <!--Profile Card 4-->
+        <div class="col-md-3 mt-4">
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+                src="../../../assets/landscape5.jpg"
+                alt="profile-sample1"
+                class="background"
+              />
+            </div>
+            <div class="profile-thumb-block">
+              <img
+                src="../../../assets/yaara.jpg"
+                alt="profile-image"
+                class="profile"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Adva Daniel<small> Analyst</small></h3>
+              <div class="icon-block">
+                <a href="#"><i class="fa fa-facebook"></i></a
+                ><a href="#"> <i class="fa fa-twitter"></i></a
+                ><a href="#"> <i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 w-100 float-left text-center"></p>
+        </div>
+
+        <!--Profile Card 5-->
+        <div class="col-md-3 mt-4">
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+                src="../../../assets/landscape3.jpg"
+                alt="profile-sample1"
+                class="background"
+              />
+            </div>
+            <div class="profile-thumb-block">
+              <img
+                src="../../../assets/Johnathan.jpg"
+                alt="profile-image"
+                class="profile"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Moshe Daniel<small> Software Developer</small></h3>
+              <div class="icon-block">
+                <a href="#"><i class="fa fa-facebook"></i></a
+                ><a href="#"> <i class="fa fa-twitter"></i></a
+                ><a href="#"> <i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 w-100 float-left text-center"></p>
+        </div>
+        <!--Profile Card 6-->
+        <div class="col-md-3 mt-4">
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+                src="../../../assets/landscape4.jpg"
+                alt="profile-sample1"
+                class="background"
+              />
+            </div>
+            <div class="profile-thumb-block">
+              <img
+                src="../../../assets/refael.jpg"
+                alt="profile-image"
+                class="profile"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Jonathan Daniel<small> Designer</small></h3>
+              <div class="icon-block">
+                <a href="#"><i class="fa fa-facebook"></i></a
+                ><a href="#"> <i class="fa fa-twitter"></i></a
+                ><a href="#"> <i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 w-100 float-left text-center"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<app-footer></app-footer>

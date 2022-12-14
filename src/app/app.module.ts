@@ -23,6 +23,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { SearchEmployeeComponent } from './components/search-employee/search-employee.component';
+import { EmployeePipe } from './pipes/employee.pipe';
+import { CustomerCardComponent } from './components/customer-card/customer-card.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,9 @@ import { SearchEmployeeComponent } from './components/search-employee/search-emp
     FilterPipe,
     EmployeesComponent,
     SearchEmployeeComponent,
+    EmployeePipe,
+    CustomerCardComponent,
+
     
   ],
   imports: [
