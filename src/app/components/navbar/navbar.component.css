@@ -5,16 +5,11 @@ margin: 5px;
 margin-right: 10px;
 }
 
-.btn {
-    padding: .45rem 1.5rem .35rem;
-}
+
 
 .gradient-custom {
     /* fallback for old browsers */
     background: linear-gradient(#700da9,#480171) 
-
-
-
 }
 
 p{
@@ -22,8 +17,18 @@ p{
     font-weight: bold;
 }
 
-#btn-size{
-  margin-right: 115px;
-  margin-left: 20px;
- 
+.userClass{
+color: #b890d0;
+cursor: default;
+}
+.userClass:hover{
+    /* color: #fff; */
+}
+
+#buttonId{
+    color: #b890d0;
+    margin-bottom: 10px
+}
+#buttonId:hover{
+    color: white;
 }
